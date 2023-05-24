@@ -21,7 +21,6 @@ html {
   background-size: cover;
   background-Position: center;
   animation: movimientoFondo 10s linear infinite;
-  width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
