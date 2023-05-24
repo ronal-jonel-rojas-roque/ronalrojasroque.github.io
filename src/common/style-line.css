@@ -1,0 +1,28 @@
+.lineas-contenedor {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .linea {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: rgb(78, 70, 70);
+    transform-origin: center bottom;
+    animation: caida 3s linear;
+  }
+  
+  @keyframes caida {
+    0% {
+      transform: translateY(10vh) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(0deg);
+    }
+  }
+  
