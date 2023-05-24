@@ -3,7 +3,7 @@ import Works from '../components/work.component';
 
 const Briefcase = () => {
     return (
-        <div>
+        <div className='container-briefcase'>
             <div>
                 <h1 className='work-1'>EH TRABAJADO EN</h1>
             </div>
