@@ -1,82 +1,120 @@
-ul {
-    display: flex;
-    padding: 0;
-    list-style: none;
-    align-items: center;
-    height: 50px;
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
 }
 
-li {
-    margin-bottom: 10px;
-}
-
-.a {
-    text-decoration: none;
-    display: block;
-    padding: 20px 30px;
-    background: rgb(3, 6, 8);
-    color: rgb(138, 142, 143);
-    font-weight: bold;
-}
-
-a:hover {
-    background: rgb(157, 172, 184);
-}
-
-header {
-    width: 100%;
-    background: rgb(4, 6, 8);
-    position: fixed;
-    top: 0;
-}
-
-.sidebar-header {
+.nav {
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    height: 8vh;
     width: 100%;
+    background: black;
     z-index: 1000;
-    transition: background-color 0.3s ease;
 }
 
-.sidebar-header.sticky {
-    background-color: #080303;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.brand {
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
-.sidebar-toggle {
-    display: fixed;
-    top: 10px;
-    cursor: pointer;
-    z-index: 100;
-
+.item {
+    list-style: none;
 }
 
-.sidebar-toggle.open {
-    display: block;
+.link {
+    text-decoration: none;
+    color: rgb(204, 204, 204);
 }
 
-@media (max-width: 768px) {
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
 
-    /* Estilos para pantallas de hasta 768px */
-    .sidebar-toggle {
+.toggler {
+    display: none;
+}
+
+.toggler div {
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: rgb(204, 204, 204);
+    transition: 0.3s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+    .toggler {
         display: block;
         cursor: pointer;
     }
 
-    .ul {
-        display: none;
+    .menu {
+        position: fixed;
+        top: 7vh;
+        right: 0;
+        height: 93vh;
+        width: 45vw;
+        background: black;
         flex-direction: column;
-        justify-content: flex-end;
-        height: 100%;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
     }
 
-    .ul.open {
-        display: block;
+    .image-navbar {
+        display: none;
+    }
+
+    .profile-text {
+        display: inline;
+        color: rgb(204, 204, 204);
+        text-decoration: none;
     }
 }
 
-.togle-icon {
-    color: black;
-    background: black;
+/* Active Class */
+.active {
+    transform: translateX(0%);
+}
+
+/* Toggle Icon Animation */
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para la imagen en el botón "Mi Perfil" */
+.image-navbar,
+.image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }

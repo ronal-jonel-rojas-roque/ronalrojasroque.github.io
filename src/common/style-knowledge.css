@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../assets/brifcase.jpg');
+  background-image: url('../assets/fondo6.jpg');
+  background-size: cover;
 }
 
 .page-knowledge {
@@ -15,7 +16,7 @@
 
 .title-know {
   display: flex;
-  color: rgb(25, 21, 29);
+  color: rgb(153, 102, 204);
   padding-top: 30px;
   align-content: center;
   justify-content: center;
@@ -34,7 +35,8 @@
   margin-top: 30px;
   border-radius: 20px;
   padding-bottom: 20px;
-  background: rgb(227, 233, 238);
+  background-image: url('../assets/fond.jpg');
+  background-size: cover;
   font-size: 15px;
 }
 
@@ -52,16 +54,6 @@
   background: rgb(166, 177, 172);
   width: 50px;
   border-radius: 50%;
-}
-
-.icon-know-1 {
-  display: flex;
-  gap: 10px;
-  margin: 5px 0 5px;
-  color: rgb(12, 27, 21);
-  font-size: 30px;
-  align-items: center;
-  justify-content: center;
 }
 
 h3 {
@@ -84,17 +76,19 @@ h3 {
 
 .h4-about {
   font-size: 20px;
+  color: white;
 }
 
 .p-about {
   font-size: 15px;
+  color: white;
 }
 
 .speed {
   margin-top: 20px;
   padding-left: 10px;
   width: 100px;
-  color: blue;
+  color: rgb(248, 248, 248);
 }
 
 .content-know {
@@ -107,17 +101,19 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: blue;
+  color: rgb(255, 255, 255);
   font-size: 20px;
   font-family: serif;
   padding-top: 15px;
 }
-
+.i{
+  color: white;
+}
 .text-know {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: blue;
+  color: rgb(255, 255, 255);
   font-size: 20px;
   font-family: cursive;
   padding-top: 15px;

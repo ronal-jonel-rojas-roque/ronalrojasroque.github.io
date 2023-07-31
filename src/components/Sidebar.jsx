@@ -4,43 +4,38 @@ import '../common/style-siderbar.css';
 import { HiMenu } from 'react-icons/hi';
 
 const Sidebar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isSticky, setIsSticky] = useState(false);
-
-    const handleToggle = () => {
-        setIsOpen(!isOpen);
-    };
+    const [active, setActive] = useState("menu");
+    const [icon, setIcon] = useState("toggler");
+    const [showProfileText, setShowProfileText] = useState(true);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const isScrolling = window.scrollY > 0;
-            setIsSticky(isScrolling);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    useEffect(() => {
-        const handleDocumentClick = (event) => {
-            const target = event.target;
-            const sidebar = document.querySelector('.ul');
-            const sidebarToggle = document.querySelector('.sidebar-toggle');
-
-            if (!sidebar.contains(target) && target !== sidebarToggle) {
-                setIsOpen(false);
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setShowProfileText(false);
+            } else {
+                setShowProfileText(true);
             }
         };
 
-        document.addEventListener('click', handleDocumentClick);
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
 
         return () => {
-            document.removeEventListener('click', handleDocumentClick);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
+
+    const navToggle = () => {
+        if (active === "menu") {
+            setActive("menu active");
+        } else setActive("menu");
+
+        // Icon Toggler
+        if (icon === "toggler") {
+            setIcon("toggler toggle");
+        } else setIcon("toggler");
+    };
 
     const Icon = [
         {
@@ -49,24 +44,22 @@ const Sidebar = () => {
     ]
 
     return (
-        <header className={`sidebar-header ${isSticky ? 'sticky' : ''}`}>
-            <nav>
-                <div className={`sidebar-toggle ${isOpen ? 'open' : ''}`} onClick={handleToggle}>
-                    {
-                        Icon.map((item) => (
-                            <i className='togle-icon'>{item.icon}</i>
-                        ))
-                    }
-                </div>
-                <ul className={`ul ${isOpen ? 'open' : ''}`}>
-                    <li><a className='a' href="#home">INICIO</a></li>
-                    <li><a className='a' href="#about">ACERCA DE</a></li>
-                    <li><a className='a' href="#knowledge">CONOCIMIENTOS</a></li>
-                    <li><a className='a' href="#briefcase">PORTAFOLIO</a></li>
-                    <li><a className='a' href="#footers">CONTACTO</a></li>
+        <div>
+            <nav className="nav">
+                <ul className={active}>
+                    <li className="item"><a className='link' href="#home">INICIO</a></li>
+                    <li className="item"><a className='link' href="#about">ACERCA DE</a></li>
+                    <li className="item"><a className='link' href="#knowledge">CONOCIMIENTOS</a></li>
+                    <li className="item"><a className='link' href="#briefcase">PORTAFOLIO</a></li>
+                    <li className="item"><a className='link' href="#footers">CONTACTO</a></li>
                 </ul>
+                <div onClick={navToggle} className={icon}>
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
+                </div>
             </nav>
-        </header>
+        </div>
     );
 };
 

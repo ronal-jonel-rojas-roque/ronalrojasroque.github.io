@@ -44,10 +44,6 @@ const Knowledge = () => {
               <i className='i'>Git hub, Postman, Adobe xd, Figma</i>
             </div>
             <div>
-              <p className="p-know">Gestor de base de datos</p>
-              <i>SQL Server, MYSQL, Mongo DB, Postgresql</i>
-            </div>
-            <div>
               <p className="p-know">Librerias</p>
               <i className='i'>React, Bootstrap, Styled components, React - Incons,Axions, typeORM</i>
             </div>

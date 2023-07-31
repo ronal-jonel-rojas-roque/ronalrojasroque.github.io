@@ -15,11 +15,11 @@ const About = () => {
 
                     </div>
                     <div className="content-container">
-                        <h2 className='h2-about'>Egresado con grado en bachiller en la carrera profesional de Ingeniería de Sistemas con
-                            conocimientos en informática, tanto en hardware y en software.
-                            Me considero una persona responsable, ordenado y competitivo orientado a los
-                            resultados, con excelentes habilidades de comunicación y resolución de problemas con
-                            el objetivo de ser cada día un mejor profesional.</h2>
+                        <h2 className='h2-about'>Programador Full Stack con experiencia en el desarrollo de aplicaciones web.
+                        Amplios conocimientos en JavaScript, TypeScript, .Net Core 6 SQL, Server, MYSQL, Mongo DB yPostgresql, 
+                        así como en el uso de tecnologías y librerías como React Js, Bootstrap, Node Js, NestJS, Git Hub y 
+                        Postman. Apasionado por la resolución de problemas y el desarrollo de solucioneseficientes. y 
+                        siempre dispuesto a aprender nuevas tecnologías .</h2>
                         <LinkedInButton></LinkedInButton>
                     </div>
                 </div>

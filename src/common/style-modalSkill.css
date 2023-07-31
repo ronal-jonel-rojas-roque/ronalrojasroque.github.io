@@ -1,0 +1,113 @@
+/* Estilos del contenedor del modal */
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-container.active {
+    display: flex;
+}
+
+/* Estilos del contenido del modal */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    opacity: 0;
+    background-image: url('../assets/noche.jpg');
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-container.active .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para la columna de habilidades */
+.skill-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Estilos para cada fila de habilidad */
+.skill-row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.skill-row.selected {
+    background-color: transparent;
+}
+
+/* Estilos para la barra de progreso */
+.progress-bar {
+    width: 150px;
+    height: 15px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Estilos para el indicador de progreso */
+.progress {
+    height: 100%;
+    background-color: #09c0ee;
+    border-radius: 5px;
+}
+
+.progress span {
+    color: #fff;
+    font-size: 12px;
+}
+
+/* Estilos para el contenedor del gráfico circular */
+.nivo-pie-container {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: none;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+}
+.skill-row.selected .nivo-pie-container.active {
+    display: block;
+  }
+.skill-row:hover .nivo-pie-container {
+    display: block;
+    position: absolute;
+    top: -100px;
+    left: 250px;
+}
+
+/* Estilos para el botón de cierre */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #666;
+    font-size: 24px;
+    background: none;
+    border: none;
+}

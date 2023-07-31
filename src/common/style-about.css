@@ -20,7 +20,7 @@
 .content-container {
     flex: 1;
     height: 100vh;
-    background-image: url('https://i.pinimg.com/736x/4f/b3/44/4fb344699a5151ba26c034b792626cfd.jpg');
+    background-image: url('../assets/fondo5.jpg');
     color: white;
     text-align: center;
 }
@@ -49,6 +49,7 @@
 
 .cv-link.no-underline {
     text-decoration: none;
+    font-size: 2rem;
 }
 
 .cv-link {
@@ -86,7 +87,6 @@
         padding: 0 0px 0 0;
     }
     .cv-link {
-        font-size: 50px;
         background-color: transparent;
         color: #2b45bb;
     }

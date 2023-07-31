@@ -1,23 +1,21 @@
 import React from 'react';
+import { Card, Typography, Button } from 'antd';
 import '../common/style-briefcase.css';
-const Works = ({ image, title, description, buttonText, link }) => {
 
+const { Meta } = Card;
 
+const Work = ({ image, title, description, buttonText, link }) => {
     return (
-        <div>
-            <div className="card">
-                <img src={image} alt="Card" className="card-image" />
-                <div className="card-content">
-                    <h3 className="card-title">{title}</h3>
-                    <p className="card-description">{description}</p>
-                    <a className="card-button" href={link}>{buttonText}</a>
-                </div>
-            </div>
-        </div>
-        
+        <Card
+            cover={<img alt="Card" src={image} className="card-image" />}
+            className="custom-card"
+        >
+            <Meta title={title} description={description} className='card-description'/>
+            <Button href={link} type="primary">
+                {buttonText}
+            </Button>
+        </Card>
     );
 };
 
-
-
-export default Works;
+export default Work;
