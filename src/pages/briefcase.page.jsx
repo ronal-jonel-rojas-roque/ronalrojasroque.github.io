@@ -37,7 +37,7 @@ const Briefcase = () => {
                     title="CASHSOL"
                     description="Sistema web enfocado en actividades bancarias"
                     buttonText="Detalles"
-                    link="https://www.dabambu.com"
+                    link="https://prestamoscashsol.com/"
                 />
                 <Works
                     image={Drenvio}
