@@ -14,7 +14,7 @@ function Footer() {
       </div>
       <div className='footer-column'>
         <div className='column-content'>
-          <p>Email: ronalrojasroquej@gmail.com</p>
+          <p>ronalrojasroquej@gmail.com</p>
           <p>
             <a href="https://wa.me/51989505663" target="_blank" rel="noreferrer" className="icono-wsp">
               <FaWhatsapp />
