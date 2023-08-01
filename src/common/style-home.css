@@ -88,15 +88,19 @@ html {
 }
 
 .typing-effect {
-  animation: typing 4s steps(40), blink-caret 0.9s step-end 6s infinite;
+  animation: typing 3s steps(40), blink-caret 0.9s step-end 5s infinite;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 0.15em solid;
+  border-right: 0.15em solid red;
 }
 
 @keyframes typing {
   from {
     width: 0;
+  }
+
+  to {
+    width: 100%;
   }
 }
 
