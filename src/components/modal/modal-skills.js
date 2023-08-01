@@ -9,10 +9,6 @@ const Modal = ({ isOpen, handleCloseModal, technologySkills, toolsSkills }) => {
         setSelectedSkill(skill);
     };
 
-    const handleCloseClick = () => {
-        setSelectedSkill(null);
-        handleCloseModal();
-    }
     return (
         <div className={`modal-container ${isOpen ? 'active' : ''}`} onClick={handleCloseModal}>
             <div className={`modal-content ${isOpen ? 'active' : ''}`} onClick={(e) => e.stopPropagation()}>

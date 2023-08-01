@@ -6,14 +6,12 @@ import { HiMenu } from 'react-icons/hi';
 const Sidebar = () => {
     const [active, setActive] = useState("menu");
     const [icon, setIcon] = useState("toggler");
-    const [showProfileText, setShowProfileText] = useState(true);
 
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 768) {
-                setShowProfileText(false);
-            } else {
-                setShowProfileText(true);
+                // Si la ventana es más grande o igual a 768px, ocultamos el menú
+                setActive("menu");
             }
         };
 
@@ -36,12 +34,6 @@ const Sidebar = () => {
             setIcon("toggler toggle");
         } else setIcon("toggler");
     };
-
-    const Icon = [
-        {
-            icon: <HiMenu />
-        },
-    ]
 
     return (
         <div>

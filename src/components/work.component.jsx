@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Typography, Button } from 'antd';
+import { Card, Button } from 'antd';
 import '../common/style-briefcase.css';
 
 const { Meta } = Card;

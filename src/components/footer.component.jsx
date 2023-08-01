@@ -16,7 +16,7 @@ function Footer() {
         <div className='column-content'>
           <p>Email: ronalrojasroquej@gmail.com</p>
           <p>
-            <a href="https://wa.me/51989505663" target="_blank" className="icono-wsp">
+            <a href="https://wa.me/51989505663" target="_blank" rel="noreferrer" className="icono-wsp">
               <FaWhatsapp />
             </a> +51 989505663
           </p>
