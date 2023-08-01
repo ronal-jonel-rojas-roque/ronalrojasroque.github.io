@@ -28,8 +28,8 @@ const Knowledge = () => {
               </i>
             </div>
             <div>
-              <p className="p-know">Idiomas que hablo:</p>
-              <i className='i'>HTML 5, CSS 3</i>
+              <p className="p-know">Idioma que hablo:</p>
+              <i className='i'>Español</i>
             </div>
             <div>
               <p className="p-know">Lenguaje de Programacion:</p>
