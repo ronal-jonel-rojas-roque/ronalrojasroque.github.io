@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../common/style-siderbar.css';
 
-import { HiMenu } from 'react-icons/hi';
-
 const Sidebar = () => {
     const [active, setActive] = useState("menu");
     const [icon, setIcon] = useState("toggler");
